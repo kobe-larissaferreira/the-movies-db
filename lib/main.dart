@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:tmdbmovies/app/routes/app_pages.dart';
 import 'package:tmdbmovies/app/ui/themes/app_theme.dart';
+import 'package:contentful/contentful.dart';
 
 import 'app/routes/app_routes.dart';
 
