@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "304371843779",
+    "project_id": "the-movies-bd",
+    "storage_bucket": "the-movies-bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304371843779:android:a7e731427060929f9c1876",
+        "android_client_info": {
+          "package_name": "com.example.tmdbmovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304371843779-1ak3b9tep3mtr398i4iunj8vvufi50cf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tmdbmovies",
+            "certificate_hash": "9d64e07b81737ae986d5b0c19bbb62375bce2337"
+          }
+        },
+        {
+          "client_id": "304371843779-gl94qh9o3s4n18t5vs9t6ef8q6tonb3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb0kPYCJ360JyGI4W6q12L9u2931Zs9w4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304371843779-gl94qh9o3s4n18t5vs9t6ef8q6tonb3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

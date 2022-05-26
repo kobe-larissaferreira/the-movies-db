@@ -1,15 +1,13 @@
-// ignore_for_file: deprecated_member_use, prefer_const_constructors
+// ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tmdbmovies/app/controller/login_controller.dart';
-import 'package:tmdbmovies/app/routes/app_routes.dart';
 import 'package:tmdbmovies/app/ui/themes/app_color.dart';
 
-class LoginPage extends StatelessWidget {
-  final LoginController _loginController = Get.find<LoginController>();
+class RegisterPage extends StatelessWidget {
+  final LoginController _loginController = LoginController();
   final _formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,31 +42,30 @@ class LoginPage extends StatelessWidget {
                       child: Image.asset("assets/images/logo.png"),
                     ),
                   ),
-                  // ignore: prefer_const_constructors
-                  SizedBox(
-                    height: 48.0,
+                  SizedBox(height: 28),
+                  Center(
+                    child: Text(
+                      "Cadastrar",
+                      style: TextStyle(fontSize: 28, color: AppColors.shape),
+                    ),
                   ),
+                  SizedBox(height: 50),
                   TextFormField(
-                    controller: _loginController.emailTextController,
+                    controller: _loginController.nameTextController,
                     validator: (value) {
                       if (value.isEmpty) {
-                        return "Por favor, digite seu email.";
-                      } else if (!GetUtils.isEmail(value)) {
-                        return "Digite um email válido";
+                        return "Por favor, digite seu nome.";
                       }
                       return null;
                     },
-
-                    keyboardType: TextInputType.emailAddress,
+                    //keyboardType: TextInputType.emailAddress,
                     autofocus: false,
-                    style: TextStyle(color: AppColors.shape),
                     //initialValue: "emailteste@gmail.com",
                     // ignore: prefer_const_constructors
+                    style: TextStyle(color: AppColors.shape),
                     decoration: InputDecoration(
-                      hintText: "Digite seu Email",
-
-                      hintStyle:
-                          TextStyle(color: AppColors.shape, fontSize: 12),
+                      hintText: "Digite seu Nome",
+                      hintStyle: TextStyle(color: AppColors.shape),
                       // ignore: prefer_const_constructors
                       contentPadding: EdgeInsets.symmetric(
                         horizontal: 20,
@@ -85,7 +82,42 @@ class LoginPage extends StatelessWidget {
                   ),
                   // ignore: prefer_const_constructors
                   SizedBox(
-                    height: 8,
+                    height: 18.0,
+                  ),
+                  TextFormField(
+                    controller: _loginController.emailTextController,
+                    validator: (value) {
+                      if (value.isEmpty) {
+                        return "Por favor, digite seu email.";
+                      } else if (!GetUtils.isEmail(value)) {
+                        return "Digite um email válido";
+                      }
+                      return null;
+                    },
+                    keyboardType: TextInputType.emailAddress,
+                    autofocus: false,
+                    style: TextStyle(color: AppColors.shape),
+                    //initialValue: "emailteste@gmail.com",
+                    // ignore: prefer_const_constructors
+                    decoration: InputDecoration(
+                      hintText: "Digite seu Email",
+                      hintStyle: TextStyle(color: AppColors.shape),
+                      // ignore: prefer_const_constructors
+                      contentPadding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 10,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(32),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.shape),
+                        borderRadius: BorderRadius.circular(32),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 18,
                   ),
                   TextFormField(
                     controller: _loginController.passwordTextController,
@@ -104,9 +136,7 @@ class LoginPage extends StatelessWidget {
                     // ignore: prefer_const_constructors
                     decoration: InputDecoration(
                       hintText: "Digite sua Senha",
-
-                      hintStyle:
-                          TextStyle(color: AppColors.shape, fontSize: 12),
+                      hintStyle: TextStyle(color: AppColors.shape),
                       // ignore: prefer_const_constructors
                       contentPadding: EdgeInsets.symmetric(
                         horizontal: 20,
@@ -117,13 +147,10 @@ class LoginPage extends StatelessWidget {
                       ),
 
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: AppColors.shape,
-                          ),
+                          borderSide: BorderSide(color: AppColors.shape),
                           borderRadius: BorderRadius.circular(32)),
                     ),
                   ),
-                  // ignore: prefer_const_constructors
                   SizedBox(
                     height: 24,
                   ),
@@ -135,30 +162,24 @@ class LoginPage extends StatelessWidget {
                       ),
                       onPressed: () {
                         if (_formKey.currentState.validate()) {
-                          _loginController.login();
+                          _loginController.register();
                         }
                       },
                       padding: EdgeInsets.all(12),
                       color: AppColors.primary,
                       child: Text(
-                        "Acessar",
-                        style: TextStyle(color: AppColors.shape, fontSize: 12),
+                        "Cadastrar",
+                        style: TextStyle(color: AppColors.shape),
                       ),
                     ),
                   ),
                   FlatButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Esqueceu a senha?",
-                        style: TextStyle(color: AppColors.shape),
-                      )),
-                  FlatButton(
                       onPressed: () {
-                        Get.toNamed(Routes.REGISTER);
+                        Get.back();
                       },
                       child: Text(
-                        "Cadastrar-se",
-                        style: TextStyle(color: AppColors.shape),
+                        "Fazer Login",
+                        style: TextStyle(color: AppColors.primary),
                       )),
                 ],
               ),
