@@ -1,7 +1,7 @@
 import 'package:contentful/client.dart';
 import 'package:flutter/material.dart';
-import 'package:tmdbmovies/models/movie.dart';
 import 'package:contentful/contentful.dart';
+import 'package:tmdbmovies/app/data/model/movie.dart';
 
 class Repository {
   Client contentful =
