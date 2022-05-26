@@ -36,29 +36,48 @@ class LoginApiClient {
       switch (e.code) {
         case "ERROR_OPERATION_NOT_ALLOWED":
           Get.defaultDialog(
-              title: "ERROR",
-              content: Text("Contas anônimas não estão habilitadas"));
+              title: "Ops, algo deu errado",
+              content: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Contas anônimas não estão habilitadas"),
+              ));
           break;
         case "ERROR_WEAK_PASSWORD":
           Get.defaultDialog(
-              title: "ERROR", content: Text("Sua senha é muito fraca"));
+              title: "Ops, algo deu errado",
+              content: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Sua senha é muito fraca"),
+              ));
           break;
         case "ERROR_INVALID_EMAIL":
           Get.defaultDialog(
-              title: "ERROR", content: Text("Seu email é inválido"));
+              title: "Ops, algo deu errado",
+              content: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Seu email é inválido"),
+              ));
           break;
         case "ERROR_EMAIL_ALREADY_IN_USE":
           Get.defaultDialog(
-              title: "ERROR",
+              title: "Ops, algo deu errado",
               content: Text("O e-mail já está em uso em outra conta"));
           break;
         case "ERROR_INVALID_CREDENTIAL":
           Get.defaultDialog(
-              title: "ERROR", content: Text("Seu email é inválido"));
+              title: "Ops, algo deu errado",
+              content: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Seu email é inválido"),
+              ));
           break;
         default:
           Get.defaultDialog(
-              title: "ERROR", content: Text("Ocorreu um erro indefinido."));
+              title: "Ops, algo deu errado",
+              content: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Ocorreu um erro indefinido."),
+              ));
       }
       return null;
     }

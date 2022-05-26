@@ -124,7 +124,7 @@ class RegisterPage extends StatelessWidget {
                     validator: (value) {
                       if (value.isEmpty) {
                         return "Por favor, digite uma senha.";
-                      } else if (value.length > 6) {
+                      } else if (value.length < 6) {
                         return "Digite uma senha maior que 5 caracteres";
                       }
                       return null;
