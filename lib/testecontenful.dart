@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tmdbmovies/models/movie.dart';
+import 'app/data/model/movie.dart';
 
-import './data/repository.dart';
+import 'app/data/repository/contentful_repository.dart';
 
 void main() {
   runApp(

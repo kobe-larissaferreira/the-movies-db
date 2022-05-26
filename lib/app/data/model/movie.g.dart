@@ -29,7 +29,7 @@ Movie _$MovieFromJson(Map<String, dynamic> json) {
     release: json['release'] == null
         ? null
         : DateTime.parse(json['release'] as String),
-    overview: json['overview'] as String,
+    textOverview: json['textOverview'] as String,
     popularity: (json['popularity'] as num).toDouble(),
     runtime: json['runtime'] as int,
     trailer: json['trailer'] as String,
@@ -41,6 +41,6 @@ Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
       'release': instance.release?.toIso8601String(),
       'runtime': instance.runtime,
       'popularity': instance.popularity,
-      'overview': instance.overview,
+      'textOverview': instance.textOverview,
       'trailer': instance.trailer,
     };

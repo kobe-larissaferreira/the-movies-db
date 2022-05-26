@@ -20,19 +20,20 @@ class Movie {
   final DateTime release;
   final int runtime;
   final double popularity;
-  final String overview;
+  final String textOverview;
   final String trailer;
 
   Movie(
       {this.title,
       this.release,
-      this.overview,
+      this.textOverview,
       this.popularity,
       this.runtime,
       this.trailer});
 
   static Movie fromJson(Map<String, dynamic> json) {
     print('PEGOU MOVIE FROM JSON');
+    print(json);
     return _$MovieFromJson(json);
   }
 
