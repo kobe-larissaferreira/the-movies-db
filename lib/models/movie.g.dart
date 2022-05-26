@@ -30,7 +30,7 @@ Movie _$MovieFromJson(Map<String, dynamic> json) {
         ? null
         : DateTime.parse(json['release'] as String),
     overview: json['overview'] as String,
-    popularity: (json['popularity'] as num)?.toDouble(),
+    popularity: (json['popularity'] as num).toDouble(),
     runtime: json['runtime'] as int,
     trailer: json['trailer'] as String,
   );

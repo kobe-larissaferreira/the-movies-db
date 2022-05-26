@@ -1,26 +1,20 @@
 import 'package:contentful/client.dart';
+import 'package:flutter/material.dart';
 import 'package:tmdbmovies/models/movie.dart';
+import 'package:contentful/contentful.dart';
 
 class Repository {
-  Repository(this.contentful);
-  final Client contentful;
+  Client contentful =
+      Client('5apq110l0nwi', '1VWkA_O8fZ1aNbOyhX28_r819bSQHwbkKxDeGgqi9hY');
 
-  Future<MovieContent> findBySlug(String slug) async {
-    final collection = await contentful.getEntries<MovieContent>({
-      'content_type': 'tmdbModel',
-      'fields.title': slug,
-      'limit': '1',
-      'include': '10',
-    }, MovieContent.fromJson);
-
-    return collection.items.first;
+  Future<List<MovieContent>> getMovies() async {
+    print('OI');
+    print(contentful.toString());
+    final collection = await contentful.getEntries<MovieContent>(
+      {'content_type': 'tmdbModel'},
+      MovieContent.fromJson,
+    );
+    print(collection);
+    return collection.items;
   }
-}
-
-Future<void> main() async {
-  final repo = Repository(
-    Client('SPACE_ID', 'API_TOKEN'),
-  );
-  final movie = await repo.findBySlug('title');
-  print('Movie: ${movie.fields.title}');
 }

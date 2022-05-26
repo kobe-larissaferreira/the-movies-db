@@ -1,11 +1,7 @@
-import 'dart:html';
 import 'package:contentful/contentful.dart';
-import 'package:json_annotation/json_annotation.dart';
-import 'package:json_serializable/builder.dart';
 
 part 'movie.g.dart';
 
-@JsonSerializable()
 class MovieContent extends Entry<Movie> {
   MovieContent({
     SystemFields sys,
@@ -19,7 +15,6 @@ class MovieContent extends Entry<Movie> {
   Map<String, dynamic> toJson() => _$MovieContentToJson(this);
 }
 
-@JsonSerializable()
 class Movie {
   final String title;
   final DateTime release;
@@ -37,6 +32,7 @@ class Movie {
       this.trailer});
 
   static Movie fromJson(Map<String, dynamic> json) {
+    print('PEGOU MOVIE FROM JSON');
     return _$MovieFromJson(json);
   }
 
