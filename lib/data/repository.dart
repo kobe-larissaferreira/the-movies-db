@@ -14,7 +14,8 @@ class Repository {
       {'content_type': 'tmdbModel'},
       MovieContent.fromJson,
     );
-    print(collection);
+
+    print('total ${collection.total}');
     return collection.items;
   }
 }
