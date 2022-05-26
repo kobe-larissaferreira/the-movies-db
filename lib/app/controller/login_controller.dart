@@ -1,0 +1,38 @@
+// ignore_for_file: unnecessary_this, prefer_const_constructors
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tmdbmovies/app/data/model/user_model.dart';
+import 'package:tmdbmovies/app/data/repository/login_repository.dart';
+import 'package:tmdbmovies/app/routes/app_routes.dart';
+
+class LoginController extends GetxController {
+  final LoginRepository repository = LoginRepository();
+
+  final TextEditingController emailTextController = TextEditingController();
+  final TextEditingController passwordTextController = TextEditingController();
+  final TextEditingController nameTextController = TextEditingController();
+
+  void register() async {
+    Get.dialog(Center(child: CircularProgressIndicator()),
+        barrierDismissible: false);
+    User user = await repository.createUserWithEmailAndPassword(
+        emailTextController.text,
+        passwordTextController.text,
+        nameTextController.text);
+    if (user != null) {
+      Get.offAllNamed(Routes.HOME, arguments: user);
+    }
+  }
+
+  void login() async {
+    Get.dialog(Center(child: CircularProgressIndicator()),
+        barrierDismissible: false);
+    User user = await repository.signInWithEmailAndPassword(
+        emailTextController.text, passwordTextController.text);
+
+    if (user != null) {
+      Get.offAllNamed(Routes.HOME, arguments: user);
+    }
+  }
+}
