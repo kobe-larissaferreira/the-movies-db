@@ -32,8 +32,6 @@ class Movie {
       this.trailer});
 
   static Movie fromJson(Map<String, dynamic> json) {
-    print('PEGOU MOVIE FROM JSON');
-    print(json);
     return _$MovieFromJson(json);
   }
 
