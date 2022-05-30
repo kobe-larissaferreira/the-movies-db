@@ -50,15 +50,30 @@ class HomePage extends StatelessWidget {
               title: Text('oi'),
             ),
             body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: movies
-                    .map<Widget>(
-                      (movie) => Text(
-                        'Movie: ' + movie.fields.title,
-                      ),
-                    )
-                    .toList(),
+              child: Expanded(
+                child: ListView(
+                  children: movies
+                      .map<Widget>(
+                        (movie) => Expanded(
+                          child: Column(
+                            children: [
+                              Text(
+                                'Movie: ' + movie.fields.title,
+                              ),
+                              Text('Runtime: ' +
+                                  movie.fields.runtime.toString()),
+                              Text('Release: ' +
+                                  movie.fields.release.toString()),
+                              Text('Popularity: ' +
+                                  movie.fields.popularity.toString()),
+                              Text('Overview: ' +
+                                  movie.fields.textOverview.toString()),
+                            ],
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
               ),
             ),
           );
