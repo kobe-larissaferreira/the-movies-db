@@ -18,23 +18,14 @@ class MyApp extends StatelessWidget {
         future: Repository().getMovies(),
         builder: (context, snapshot) {
           var movies = (snapshot.data != null) ? snapshot.data : [];
-          print(movies);
           return Scaffold(
             appBar: AppBar(
               title: Text('oi'),
             ),
             body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: movies
-                    .map<Widget>(
-                      (movie) => Text('Movie: ' + movie.fields.title),
-                    )
-                    .toList(),
-              ),
+              child: Text('Movie: ${movies}'),
             ),
           );
-          print(movies);
         });
   }
 }
