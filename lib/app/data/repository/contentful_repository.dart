@@ -15,7 +15,7 @@ class Repository {
     return collection.items;
   }
 
-  Future<MovieContent> getMovieDetail(String title) async {
+  Future<Movie> getMovieDetail(String id) async {
     //TODO: retornar um filme
     // final movie =
     //     await contentful.getEntry<MovieContent>(title, MovieContent.fromJson);

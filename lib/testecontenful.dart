@@ -14,7 +14,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<String>(
+    return FutureBuilder<MovieContent>(
         future: Repository().getMovieDetail('Morbius (2022)'),
         builder: (context, snapshot) {
           var movies = (snapshot.data != null) ? snapshot.data : [];
