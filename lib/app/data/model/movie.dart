@@ -16,20 +16,23 @@ class MovieContent extends Entry<Movie> {
 }
 
 class Movie {
-  final String title;
-  final DateTime release;
-  final int runtime;
-  final double popularity;
-  final String textOverview;
-  final String trailer;
+  String title;
+  DateTime releaseDate;
+  int runtime;
+  double popularity;
+  String textOverview;
+  String trailer;
+  String image;
 
-  Movie(
-      {this.title,
-      this.release,
-      this.textOverview,
-      this.popularity,
-      this.runtime,
-      this.trailer});
+  Movie({
+    this.title,
+    this.releaseDate,
+    this.textOverview,
+    this.popularity,
+    this.runtime,
+    this.trailer,
+    this.image,
+  });
 
   static Movie fromJson(Map<String, dynamic> json) {
     print('PEGOU MOVIE FROM JSON');

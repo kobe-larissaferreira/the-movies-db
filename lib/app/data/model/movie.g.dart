@@ -26,11 +26,12 @@ Map<String, dynamic> _$MovieContentToJson(MovieContent instance) =>
 Movie _$MovieFromJson(Map<String, dynamic> json) {
   return Movie(
     title: json['title'] as String,
-    release: json['release'] == null
+    releaseDate: json['releaseDate'] == null
         ? null
-        : DateTime.parse(json['release'] as String),
+        : DateTime.parse(json['releaseDate'] as String),
     textOverview: json['textOverview'] as String,
     popularity: (json['popularity'] as num).toDouble(),
+    // image: json['image'],
     runtime: json['runtime'] as int,
     trailer: json['trailer'] as String,
   );
@@ -38,9 +39,10 @@ Movie _$MovieFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
       'title': instance.title,
-      'release': instance.release?.toIso8601String(),
+      'release': instance.releaseDate?.toIso8601String(),
       'runtime': instance.runtime,
       'popularity': instance.popularity,
+      // 'image': instance.image,
       'textOverview': instance.textOverview,
       'trailer': instance.trailer,
     };

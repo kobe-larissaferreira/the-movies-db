@@ -63,11 +63,12 @@ class HomePage extends StatelessWidget {
                               Text('Runtime: ' +
                                   movie.fields.runtime.toString()),
                               Text('Release: ' +
-                                  movie.fields.release.toString()),
+                                  movie.fields.releaseDate.toString()),
                               Text('Popularity: ' +
                                   movie.fields.popularity.toString()),
                               Text('Overview: ' +
                                   movie.fields.textOverview.toString()),
+                              // Text('Imagem' + movie.fields.image.toString()),
                             ],
                           ),
                         ),
