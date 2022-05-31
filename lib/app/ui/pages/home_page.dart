@@ -156,8 +156,8 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Container(
-                  width: 130,
-                  height: 180,
+                  width: 134,
+                  height: 188,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     image: DecorationImage(
