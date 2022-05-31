@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'app/data/model/movie.dart';
-
 import 'app/data/repository/contentful_repository.dart';
+import 'app/ui/pages/details_page.dart';
 
 void main() {
   runApp(
