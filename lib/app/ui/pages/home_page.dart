@@ -4,7 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tmdbmovies/app/data/model/movie.dart';
 import 'package:tmdbmovies/app/data/repository/contentful_repository.dart';
+import 'package:tmdbmovies/app/routes/app_routes.dart';
 import 'package:tmdbmovies/app/ui/themes/app_color.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -75,64 +77,60 @@ class HomePage extends StatelessWidget {
               // This next line does the trick.
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/caroline.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed(Routes.DETAILS);
+                  },
+                  child: Image.asset(
+                    "assets/images/caroline.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/harryPotter.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/harryPotter.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/cruella.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/cruella.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/duna.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/duna.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/matrix.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/matrix.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/space.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/space.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
               ],
@@ -150,49 +148,45 @@ class HomePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(top: 450),
-            height: 350,
+            //height: 350,
             child: ListView(
               // This next line does the trick.
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/homemAranha.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/foradomapa.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/foradomapa.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/morbius.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/morbius.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/batman.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
-                Container(
-                  width: 134,
-                  height: 188,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/batman.jpeg"),
-                    ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/images/mulherMaravilha.jpeg",
+                    fit: BoxFit.contain,
+                    width: 134,
+                    height: 188,
                   ),
                 ),
               ],
