@@ -1,4 +1,5 @@
 import 'package:tmdbmovies/app/components/details.dart';
+import 'package:tmdbmovies/app/components/movie_app_bar.dart';
 import 'package:tmdbmovies/app/ui/themes/app_color.dart';
 import 'package:flutter/material.dart';
 

@@ -1,9 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:tmdbmovies/app/components/most_popular_card.dart';
 import 'package:tmdbmovies/app/components/movie_list_card.dart';
 import 'package:tmdbmovies/app/components/search_bar.dart';
+import 'package:tmdbmovies/app/routes/app_routes.dart';
 import 'package:tmdbmovies/app/ui/themes/app_color.dart';
 
 class HomePage extends StatelessWidget {
@@ -70,19 +73,28 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 540),
-            child: Container(
-
-                // margin: EdgeInsets.only(top: 250),
-                height: 200,
-                child: MovieListCard()),
+          GestureDetector(
+            onTap: () {
+              Get.toNamed(Routes.DETAILS);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 290),
+              child: Container(
+                  //esse aqui por alguma razao nao deu certo
+                  margin: EdgeInsets.only(top: 250),
+                  height: 200,
+                  child: MovieListCard()),
+            ),
           ),
-          Container(
-              //esse aqui por alguma razao nao deu certo
-              margin: EdgeInsets.only(top: 250),
-              height: 200,
-              child: MostPopularCard()),
+          GestureDetector(
+            onTap: () {
+              Get.toNamed(Routes.DETAILS);
+            },
+            child: Container(
+                margin: EdgeInsets.only(top: 250),
+                height: 200,
+                child: MostPopularCard()),
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 30, right: 100, top: 480),
             child: Text(

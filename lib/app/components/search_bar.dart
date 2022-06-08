@@ -15,7 +15,7 @@ class SearchBar extends StatelessWidget {
             autofocus: false,
             style: TextStyle(color: AppColors.shape),
             decoration: InputDecoration(
-                hintText: "Buscar",
+                hintText: "Buscar ",
                 suffixIcon: Icon(
                   Icons.search,
                   color: AppColors.shape,
