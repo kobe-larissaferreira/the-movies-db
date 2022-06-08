@@ -28,6 +28,8 @@ class _MostPopularCardState extends State<MostPopularCard> {
                 children: movies
                     .map<Widget>(
                       (movie) => Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset(
                             "assets/images/${movie.fields.title}.jpeg",

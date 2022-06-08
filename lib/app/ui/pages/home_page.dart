@@ -69,10 +69,19 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(top: 540),
+            child: Container(
+
+                // margin: EdgeInsets.only(top: 250),
+                height: 200,
+                child: MovieListCard()),
+          ),
           Container(
+              //esse aqui por alguma razao nao deu certo
               margin: EdgeInsets.only(top: 250),
               height: 200,
-              child: MovieListCard()),
+              child: MostPopularCard()),
           Padding(
             padding: const EdgeInsets.only(left: 30, right: 100, top: 480),
             child: Text(
@@ -83,11 +92,6 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          Container(
-              //esse aqui por alguma razao nao deu certo
-              margin: EdgeInsets.only(top: 250),
-              height: 200,
-              child: MostPopularCard()),
         ],
       ),
     );
