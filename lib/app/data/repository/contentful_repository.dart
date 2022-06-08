@@ -12,7 +12,6 @@ class Repository {
       {'content_type': 'tmdbModel'},
       MovieContent.fromJson,
     );
-    print('passou aqui pra pegar a lista de filmes do contentful');
     return collection.items;
   }
 
