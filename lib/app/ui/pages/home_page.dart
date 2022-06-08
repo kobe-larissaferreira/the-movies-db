@@ -1,14 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tmdbmovies/app/data/model/movie.dart';
-import 'package:tmdbmovies/app/data/repository/contentful_repository.dart';
-import 'package:tmdbmovies/app/routes/app_routes.dart';
+import 'package:tmdbmovies/app/components/most_popular_card.dart';
+import 'package:tmdbmovies/app/components/movie_list_card.dart';
 import 'package:tmdbmovies/app/ui/themes/app_color.dart';
-import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,71 +70,9 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 250),
-            height: 200,
-            child: ListView(
-              // This next line does the trick.
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                GestureDetector(
-                  onTap: () {
-                    Get.toNamed(Routes.DETAILS);
-                  },
-                  child: Image.asset(
-                    "assets/images/caroline.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/harryPotter.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/cruella.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/duna.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/Matrix Resurrections.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/space.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-              ],
-            ),
-          ),
+              margin: EdgeInsets.only(top: 250),
+              height: 200,
+              child: MovieListCard()),
           Padding(
             padding: const EdgeInsets.only(left: 30, right: 100, top: 480),
             child: Text(
@@ -147,51 +84,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 450),
-            //height: 350,
-            child: ListView(
-              // This next line does the trick.
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/foradomapa.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/morbius.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/batman.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/images/mulherMaravilha.jpeg",
-                    fit: BoxFit.contain,
-                    width: 134,
-                    height: 188,
-                  ),
-                ),
-              ],
-            ),
-          )
+              //esse aqui por alguma razao nao deu certo
+              margin: EdgeInsets.only(top: 250),
+              height: 200,
+              child: MostPopularCard()),
         ],
       ),
     );
