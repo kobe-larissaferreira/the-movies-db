@@ -12,13 +12,26 @@ class Repository {
       {'content_type': 'tmdbModel'},
       MovieContent.fromJson,
     );
+    print('passou aqui pra pegar a lista de filmes do contentful');
     return collection.items;
   }
 
-  Future<Movie> getMovieDetail(String id) async {
-    //TODO: retornar um filme
-    // final movie =
-    //     await contentful.getEntry<MovieContent>(title, MovieContent.fromJson);
-    return null;
+  Future<Movie> getMovieDetail(String movieTitle) async {
+    Movie movie;
+    final collection = await getMovies();
+    collection
+        .forEach((element) => element.fields.title.toString() == movieTitle
+            ? movie = Movie(
+                title: element.fields.title,
+                textOverview: element.fields.textOverview,
+                trailer: element.fields.trailer,
+                runtime: element.fields.runtime,
+                releaseDate: element.fields.releaseDate,
+                popularity: element.fields.popularity,
+                image: "assets/images/${movieTitle}.jpeg",
+              )
+            : null);
+
+    return movie;
   }
 }
