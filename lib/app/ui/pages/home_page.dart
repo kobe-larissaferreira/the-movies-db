@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:tmdbmovies/app/components/most_popular_card.dart';
 import 'package:tmdbmovies/app/components/movie_list_card.dart';
+import 'package:tmdbmovies/app/components/search_bar.dart';
 import 'package:tmdbmovies/app/ui/themes/app_color.dart';
 
 class HomePage extends StatelessWidget {
@@ -95,45 +96,5 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
-
-    // return FutureBuilder<List<MovieContent>>(
-    //     future: Repository().getMovies(),
-    //     builder: (context, snapshot) {
-    //       var movies = (snapshot.data != null) ? snapshot.data : [];
-    //       print(movies);
-    //       return Scaffold(
-    //         appBar: AppBar(
-    //           title: Text('oi'),
-    //         ),
-    //         body: Center(
-    //           child: Expanded(
-    //             child: ListView(
-    //               children: movies
-    //                   .map<Widget>(
-    //                     (movie) => Expanded(
-    //                       child: Column(
-    //                         children: [
-    //                           Text(
-    //                             'Movie: ' + movie.fields.title,
-    //                           ),
-    //                           Text('Runtime: ' +
-    //                               movie.fields.runtime.toString()),
-    //                           Text('Release: ' +
-    //                               movie.fields.releaseDate.toString()),
-    //                           Text('Popularity: ' +
-    //                               movie.fields.popularity.toString()),
-    //                           Text('Overview: ' +
-    //                               movie.fields.textOverview.toString()),
-    //                         ],
-    //                       ),
-    //                     ),
-    //                   )
-    //                   .toList(),
-    //             ),
-    //           ),
-    //         ),
-    //       );
-    //       print(movies);
-    //     });
   }
 }

@@ -18,7 +18,7 @@ class DetailedMovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.primaryColorDark,
+      color: AppColors.container,
       clipBehavior: Clip.antiAlias,
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 7.5),
       shape: RoundedRectangleBorder(
@@ -34,6 +34,7 @@ class DetailedMovieCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Image.asset("assets/images/${detailedMovie.title}.jpeg"),
                 Text(
                   "${detailedMovie.title}",
                   style: TextStyle(
