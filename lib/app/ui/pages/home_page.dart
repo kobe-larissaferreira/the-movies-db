@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 155, horizontal: 10),
+            padding: const EdgeInsets.fromLTRB(40.0, 155, 40, 40.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
