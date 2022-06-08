@@ -118,7 +118,7 @@ class HomePage extends StatelessWidget {
                 GestureDetector(
                   onTap: () {},
                   child: Image.asset(
-                    "assets/images/matrix.jpeg",
+                    "assets/images/Matrix Resurrections.jpeg",
                     fit: BoxFit.contain,
                     width: 134,
                     height: 188,
