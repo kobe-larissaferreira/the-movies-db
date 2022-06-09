@@ -25,6 +25,10 @@ class DetailPage extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(top: 30, left: 20),
+            child: MovieAppBar(),
+          ),
           Container(
             child: Padding(
               padding: const EdgeInsets.only(left: 30, right: 100, top: 70),
