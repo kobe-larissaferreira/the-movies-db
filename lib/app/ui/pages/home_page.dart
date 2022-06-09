@@ -73,28 +73,18 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              Get.toNamed(Routes.DETAILS);
-            },
-            child: Padding(
-              padding: const EdgeInsets.only(top: 290),
-              child: Container(
-                  //esse aqui por alguma razao nao deu certo
-                  margin: EdgeInsets.only(top: 250),
-                  height: 200,
-                  child: MovieListCard()),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Get.toNamed(Routes.DETAILS);
-            },
+          Padding(
+            padding: const EdgeInsets.only(top: 290),
             child: Container(
+                //esse aqui por alguma razao nao deu certo
                 margin: EdgeInsets.only(top: 250),
                 height: 200,
-                child: MostPopularCard()),
+                child: MovieListCard()),
           ),
+          Container(
+              margin: EdgeInsets.only(top: 250),
+              height: 200,
+              child: MostPopularCard()),
           Padding(
             padding: const EdgeInsets.only(left: 30, right: 100, top: 480),
             child: Text(

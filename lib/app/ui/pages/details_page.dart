@@ -8,6 +8,7 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final movieTitle = ModalRoute.of(context).settings.arguments as String;
     return Scaffold(
       body: Stack(
         children: [
@@ -44,7 +45,7 @@ class DetailPage extends StatelessWidget {
             margin: EdgeInsets.only(top: 50),
             alignment: Alignment.topCenter,
             child: Details(
-              movieTitle: 'Batman',
+              movieTitle: movieTitle,
             ),
           ),
         ],
