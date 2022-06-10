@@ -1,16 +1,32 @@
-# tmdbmovies
+<h1 align="center">App The Movies Db</h1>
 
-A new Flutter project.
+<h1 align="center">
+    <a href="https://www.flutter.dev/">🔗 Flutter</a>
+</h1>
+<p align="center">🚀 Aplicação criada para consolidar os conhecimentos adquiridos sobre a linguagem de programação Flutter e Contentful</p>
 
-## Getting Started
+## 💻 Sobre o projeto
 
-This project is a starting point for a Flutter application.
+O projeto foi desenvolvido para apresentar os filmes que estão na Api do Contentful e suas respectivas informações.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Linguagem e Ferramenta
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+As seguintes ferramentas foram usadas na construção do projeto:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Dart
+- Contentful
+- Firebase
+
+### 🧭 Rodando a aplicação web
+
+```
+
+# Clone este repositório
+$ git clone
+
+# Acesse a pasta do projeto no seu terminal/cmd e compile a aplicação
+
+
+```
+
+<p align="center">Feito com ❤️ por Larissa e Franciele 👋🏽

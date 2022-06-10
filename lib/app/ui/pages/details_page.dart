@@ -27,7 +27,7 @@ class DetailPage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 30, left: 20),
+            padding: const EdgeInsets.only(top: 40, left: 20),
             child: MovieAppBar(),
           ),
           Container(
@@ -42,7 +42,7 @@ class DetailPage extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 50),
+            margin: EdgeInsets.only(top: 70),
             alignment: Alignment.topCenter,
             child: Details(
               movieTitle: movieTitle,
