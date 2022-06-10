@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tmdbmovies/app/data/model/movie.dart';
 import 'package:tmdbmovies/app/data/repository/contentful_repository.dart';
 import 'package:tmdbmovies/app/ui/pages/details_page.dart';
+import 'package:tmdbmovies/app/ui/themes/app_color.dart';
 
 class MovieListCard extends StatefulWidget {
   const MovieListCard({Key key}) : super(key: key);
@@ -23,6 +24,7 @@ class _MovieListCardState extends State<MovieListCard> {
         builder: (context, snapshot) {
           var movies = (snapshot.data != null) ? snapshot.data : [];
           return Scaffold(
+            backgroundColor: AppColors.black,
             body: Center(
               child: ListView(
                 scrollDirection: Axis.horizontal,
