@@ -3,7 +3,7 @@
 <h1 align="center">
     <a href="https://www.flutter.dev/">🔗 Flutter</a>
 </h1>
-<p align="center">🚀 Aplicação criada para consolidar os conhecimentos adquiridos sobre a linguagem de programação Flutter e Contentful</p>
+<p align="center">🚀 Aplicação criada para consolidar os conhecimentos adquiridos</p>
 
 ## 💻 Sobre o projeto
 
